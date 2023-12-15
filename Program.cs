@@ -90,7 +90,11 @@ for (var i = 0; i < options.Tasks; i++)
 		}
 
 		stopwatch.Stop();
-		elapsedTimes.Add(stopwatch.Elapsed);
+
+		lock (elapsedTimes)
+		{
+			elapsedTimes.Add(stopwatch.Elapsed);
+		}
 	}));
 }
 
