@@ -30,6 +30,12 @@ var tasks = new List<Task>();
 
 var cancellationTokenSource = new CancellationTokenSource();
 
+#if FORK
+Console.WriteLine("Forked version");
+#else
+Console.WriteLine("Official version");
+#endif
+
 Console.WriteLine($"Body size	: {options.MessageBodySize} MB");
 Console.WriteLine($"Iterations	: {options.Iterations}");
 Console.WriteLine($"Tasks		: {options.Tasks}");

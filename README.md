@@ -40,6 +40,7 @@ The test has been run with the configuration as described in the examples above.
 ### Official client (copying)
 ```
 $ dotnet run -c Release -- --mb=1 --iterations=100 --tasks=16
+Official version
 Body size       : 1 MB
 Iterations      : 100
 Tasks           : 16
@@ -48,15 +49,15 @@ Startup memory  : 20 MB
 
 ---  Start  ---
 Memory usage: 22 MB
-Memory usage: 1947 MB
-Memory usage: 2420 MB
-Memory usage: 2700 MB
+Memory usage: 1765 MB
+Memory usage: 2167 MB
+Memory usage: 2632 MB
 
 --- Results ---
-Avg time        : 3408 ms
-Min time        : 3317 ms
-Max time        : 3467 ms
-Memory          : 2710 MB
+Avg time        : 3737 ms
+Min time        : 3679 ms
+Max time        : 3759 ms
+Memory          : 2728 MB
 Queue length    : 1600 / 1600
 Valid messages  : 100 / 100 (first 100 of 1600)
 ```
@@ -64,6 +65,7 @@ Valid messages  : 100 / 100 (first 100 of 1600)
 ### Fork (copying)
 ```
 $ dotnet run -c Release -p:Fork=true -- --mb=1 --iterations=100 --tasks=16
+Forked version
 Body size       : 1 MB
 Iterations      : 100
 Tasks           : 16
@@ -72,15 +74,15 @@ Startup memory  : 20 MB
 
 ---  Start  ---
 Memory usage: 22 MB
-Memory usage: 1874 MB
-Memory usage: 2340 MB
-Memory usage: 2698 MB
+Memory usage: 1934 MB
+Memory usage: 2398 MB
+Memory usage: 2819 MB
 
 --- Results ---
-Avg time        : 3529 ms
-Min time        : 3450 ms
-Max time        : 3582 ms
-Memory          : 2753 MB
+Avg time        : 3447 ms
+Min time        : 3384 ms
+Max time        : 3489 ms
+Memory          : 2854 MB
 Queue length    : 1600 / 1600
 Valid messages  : 100 / 100 (first 100 of 1600)
 ```
@@ -88,6 +90,7 @@ Valid messages  : 100 / 100 (first 100 of 1600)
 ### Fork (non-copying)
 ```
 $ dotnet run -c Release -p:Fork=true -- --mb=1 --iterations=100 --tasks=16 --nc
+Forked version
 Body size       : 1 MB
 Iterations      : 100
 Tasks           : 16
@@ -96,14 +99,14 @@ Startup memory  : 20 MB
 
 ---  Start  ---
 Memory usage: 22 MB
-Memory usage: 54 MB
-Memory usage: 59 MB
+Memory usage: 61 MB
+Memory usage: 61 MB
 Memory usage: 61 MB
 
 --- Results ---
-Avg time        : 3459 ms
-Min time        : 3393 ms
-Max time        : 3485 ms
+Avg time        : 3252 ms
+Min time        : 3211 ms
+Max time        : 3277 ms
 Memory          : 61 MB
 Queue length    : 1600 / 1600
 Valid messages  : 100 / 100 (first 100 of 1600)
